@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallary</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: radial-gradient(circle, rgba(248, 255, 166, 0.9), rgba(239, 153, 153, 0.5));
+
+        }
+
+
+
+        h1 {
+            margin: 20px 0;
+            margin-bottom: 20px;
+            font-size: 3rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            background: radial-gradient(circle,white,rgb(15, 252, 244));
+            box-shadow: 2px 2px 10px black;
+        }
+
+        .container {
+            background: none;
+            height: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+
+        .gallary {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            background: none;
+        }
+
+        figure {
+            width: 32%;
+         
+            position: relative;
+            margin-bottom: 20px;
+            border-radius: 10px;
+             overflow: hidden;
+
+        }
+
+        figure img {
+            width: 100%;
+             height: 100%;
+           filter: grayscale(100%);
+            box-shadow: 0 0 20px #333;
+            object-fit: cover;
+        }
+
+        figure:hover {
+            transform: scale(1.3);
+            z-index: 1;
+            filter: drop-shadow(0 0 10px #333);
+            transition: 0.5s;
+        }
+
+
+
+        figure:hover img {
+            filter: grayscale(0%);
+            filter: brightness(110%);
+        }
+
+        figure figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 5px;
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            font-size: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            background: none;
+            text-shadow: 2px -2px 5px black, -2px 2px 5px black;
+            color: rgb(255, 255, 255);
+            opacity: 0;
+            border-radius: 0 0 10px 10px;
+            background: linear-gradient(0deg, rgb(0, 0, 0, 0.9), 0%, rgb(255, 255, 255, 0.1), 100%);
+            transition: 0.5s;
+        }
+
+        figure:hover figcaption {
+            opacity: 1;
+            transform: scale(1.04);
+            transform: translateY(-50px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="container">
+            <h1>Team Aimers</h1>
+            <div class="gallary">
+
+                <figure>
+                    <img src="Images/image (1).jpeg" alt="Net down hai tera">
+                    <figcaption>Mukund</figcaption>
+                </figure>
+                <figure>
+                    <img src="Images/rupesh.jpeg" alt="Net down hai tera">
+                    <figcaption>Rupesh</figcaption>
+                </figure>
+                <figure>
+                    <img src="Images/image (10).jpeg" alt="Net down hai tera">
+                    <figcaption>Sainjit</figcaption>
+                </figure>
+                <figure>
+                    <img src="Images/image (2).jpeg" alt="Net down hai tera">
+                    <figcaption>Ritik</figcaption>
+                </figure>
+                <figure>
+                    <img src="Images/image (11).jpeg" alt="Net down hai tera">
+                    <figcaption>Saurabh</figcaption>
+                </figure>
+                <figure>
+                    <img src="Images/image (5).jpeg" alt="Net down hai tera">
+                    <figcaption>Narasingh</figcaption>
+                </figure>
+                <figure class="lastrow">
+                    <img src="Images/image.png" alt="Net down hai tera">
+                    <figcaption>Shubham</figcaption>
+                </figure>
+                <figure class="lastrow">
+                    <img src="Images/image (8).jpeg" alt="Net down hai tera">
+                    <figcaption>Amit</figcaption>
+                </figure>
+                <figure class="lastrow">
+                    <img src="Images/image (7).jpeg" alt="Net down hai tera">
+                    <figcaption>Madhav</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
